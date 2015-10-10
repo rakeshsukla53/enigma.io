@@ -88,7 +88,7 @@ def websitePage(website, base):
 
 def main():
     '''
-    Go over each links in the website and create a JSON file for address
+    Go over each links in the website and create a JSON file for address. Check out solution.json file
     :return:
     '''
     website = 'http://data-interview.enigmalabs.org/companies/'
