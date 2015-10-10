@@ -52,15 +52,15 @@ def createJson(url):
     r = requests.get(url)
     soup = BeautifulSoup(r.text)
     letters = soup.find_all('td')
-    companyName = letters[1].get_text()
+    companyName = letters[1].get_text()  #Company name
     for i in range(len(letters)-1):
         if i % 2 == 0:
-            data[letters[i].get_text()] = letters[i+1].get_text()
+            data[letters[i].get_text()] = letters[i+1].get_text()  #creating a dictionary
     websiteData[companyName] = data
 
 def url_fix(s, charset='utf-8'):
     """
-    this program is basically to normalize the url since some url contain spaces, comma between them
+    this program is basically to normalize the url since some url contain spaces, comma between them.
     :param s: string of your link
     :param charset:
     :return: normalized link
@@ -101,4 +101,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-    print json.dumps(websiteData)
+    print json.dumps(websiteData)  #json encoding
