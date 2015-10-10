@@ -19,7 +19,7 @@ with open('test.csv','r') as csvfile: # input csv file
             #filter out invalid date using a regular expression
             if date:
                 dt = parse(date.group())
-                row[10] = (dt.strftime('%Y-%m-%d')) #converting datefield into ISO format
+                row[10] = (dt.strftime('%Y-%m-%d')) #converting datefield into ISO format YYYY-MM-DD
             else:
                 row.append(str(row[-1]))
                 row[10] = ''
