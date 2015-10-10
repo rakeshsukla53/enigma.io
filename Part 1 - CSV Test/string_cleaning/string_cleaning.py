@@ -2,7 +2,7 @@ __author__ = 'rakesh'
 
 import csv
 
-with open('solution_test.csv', 'wb') as f: # output csv file
+with open('solution.csv', 'wb') as f: # output csv file
     writer = csv.writer(f)
     with open('test.csv','r') as csvfile: # input csv file
         reader = csv.reader(csvfile, delimiter=',')
